@@ -1,0 +1,63 @@
+
+
+<h1>Create Task</h1>
+
+<!-- <div style="padding-left: 30px;">
+      <button type="button" id="addRow" class="btn btn-success" ng-click="addRow()">Add Row</button>
+</div> -->
+    <table id="task-form">
+    <tr>
+      <td width="200px" class="taskinput">Project </td>
+        <td><select ng-model="vm.task.projectName" ng-options="i.ProjectName for i in vm.projects">
+              <option value="">--Select--</option>              
+            </select>
+        </td>
+        <td width="50px">&nbsp;&nbsp;</td>
+      <td width="170px" class="taskinput">AssignedTo </td><td>&nbsp;&nbsp;</td>
+        <td><select ng-model="vm.task.username" ng-options="i.username for i in vm.users">
+              <option value="">--Select--</option>              
+            </select>
+        </td>
+    </tr>   
+    <tr>
+      <td width="200px"  class="taskinput">Task Name </td><td><input type="" name="" ng-model="vm.task.taskName"></td><td>&nbsp;&nbsp;</td>
+      <td width="170px" class="taskinput">Task Status </td><td>&nbsp;&nbsp;</td>
+        <td><select ng-model="vm.task.status" ng-options="i.status for i in vm.status">
+              <option value="" >--Select--</option>              
+            </select>
+        </td>
+    </tr>
+  
+    
+    <tr>
+    <td  width="200px"  class="taskinput">Estimated Start Date</td><td><input type="date" id="estdate" name="estdateinput" ng-model="vm.task.estimatedStartDate" placeholder="yyyy-MM-dd" min="{{estimatedStartDate.currentDate | date: 'yyyy-MM-dd'}}" required></td> <td>&nbsp;&nbsp;</td>    
+    <td width="170px" class="taskinput">Estimated End Date </td><td>&nbsp;&nbsp;</td><td><input type="date" ng-model="vm.task.estimatedEndDate"></td>
+    </tr>
+
+    <tr>
+      <td width="200px"  class="taskinput">Actual Start Date </td><td><input type="date" id="actstdate" name="actdateinput" ng-model="vm.task.actualStartDate" placeholder="yyyy-MM-dd" min="{{estimatedStartDate.currentDate | date: 'yyyy-MM-dd'}}" required></td><td>&nbsp;&nbsp;</td>
+      <td width="170px" class="taskinput">Actual End Date </td><td>&nbsp;&nbsp;</td><td><input type="date" ng-model="vm.task.actualEndDate"></td>
+    </tr>   
+    <tr>
+      <td width="200px"  class="taskinput">Estimated Effort</td><td><input type="" name="" ng-model="vm.task.estimatedEffort"></td> <td>&nbsp;&nbsp;</td>
+      <td width="170px" class="taskinput">Actual Effort </td><td>&nbsp;&nbsp;</td><td><input type="" name="" ng-model="vm.task.actualEffort"></td>
+    </tr>
+    <tr>
+        <td width="200px"  class="taskinput">Story Point</td>
+            <td>
+                <select>
+                  <option value="1" ng-model="vm.task.storyPoint">1</option>
+                  <option value="2" ng-model="vm.task.storyPoint">2</option>
+                  <option value="3" ng-model="vm.task.storyPoint">3</option>
+                  <option value="5" ng-model="vm.task.storyPoint">5</option>
+                  <option value="8" ng-model="vm.task.storyPoint">8</option>
+                  <option value="13" ng-model="vm.task.storyPoint">13</option>
+                  <option value="21" ng-model="vm.task.storyPoint">21</option>
+                </select>
+            </td> <td>&nbsp;&nbsp;</td>
+        
+    </tr>    
+    </table>
+    <br><br>    
+    <button class="btn btn-primary" ng-click="vm.createTask()">Create Task</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!-- <button class="btn btn-primary" ng-click="vm.updateTask()">Update Task</button> -->    

@@ -1,0 +1,5 @@
+﻿{
+    "connectionString": "mongodb://localhost:27017/trackerAppDB",
+    "apiUrl": "http://localhost:3000/api",
+    "secret": "HONDA TIME TRACKER"
+}

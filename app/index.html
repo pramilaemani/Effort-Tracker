@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Time tracker Application</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.css">
+  
+    <link rel="stylesheet" type="text/css" href="app-content/app.css">
+    <link rel="styleSheet" href="http://ui-grid.info/release/ui-grid.css" />
+
+</head>
+<body background="app-content/images/app.jpg">
+    <div id="menu1"><!-- header -->
+    <header>
+        <ul id="main-nav">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="account">Account</a></li>
+            <li><a ui-sref="task">Task</a></li>
+            <li><a ui-sref="reports">Reports</a></li>
+            <li class="logout"><a href="/login" target="_self">Logout</a></li>
+        </ul>
+        <div class="flash-message" ng-if="flash">
+            <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main ui-view></main>
+
+    <!-- footer -->
+    <footer></footer>
+    </div>
+    <!-- external scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.5.0/angular-touch.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="http://ui-grid.info/release/ui-grid.js"></script>
+    <!-- <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap-tpls.js"></script>
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="app-services/user.service.js"></script>
+    <script src="app-services/task.service.js"></script>
+    <script src="app-services/flash.service.js"></script>    
+    <script src="app-services/report.service.js"></script>
+    <script src="home/index.controller.js"></script>
+    <script src="account/index.controller.js"></script>
+    <script src="task/index.controller.js"></script>
+    <script src="report/index.controller.js"></script>
+</body>
+</html>

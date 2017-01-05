@@ -1,0 +1,59 @@
+<!-- <form id="reportsForm">
+<br><br> -->
+
+<!-- <table id="reportsTable">
+	<tr>
+		<td style="width: 100px">Project:</td>
+		<td>
+			<select ng-model="vm.task.projectName" ng-options="i.ProjectName for i in vm.projects">
+              <option value="">Select</option>              
+            </select>
+		</td>
+		<td style="width: 100px"></td>
+		<td>Start Date</td><td><input type="date" name=""></td>
+		<td style="width: 100px"></td>
+		<td>End Date</td><td><input type="date" name=""></td>		
+	</tr>
+	
+</table>
+	<br><br>
+	<button type="submit" class="btn btn-primary" ng-click="vm.getReport()">Generate Report</button>
+</form>
+
+<table id="taskTable">
+	<tr>
+		<td>Project</td>
+		<td>Resource</td>
+		<td>TaskName</td>
+		<td>TaskStatus</td>
+		<td>Estimated Start Date</td>
+		<td>Estimated End Date</td>
+		<td>Actual Start Date</td>
+		<td>Actual End Date</td>
+		<td>Estimated Effort</td>
+		<td>Actual Effort</td>
+	</tr>
+	<tr ng-repeat = "task in vm.tasks">
+		<td>{{task.Project}}</td>
+		<td>{{task.Resource}}</td>
+		<td>{{task.TaskName}}</td>
+		<td>{{task.TaskStatus}}</td>
+		<td>{{task.EstimatedStartDate}}</td>
+		<td>{{task.EstimatedEndDate}}</td>
+		<td>{{task.ActualStartDate}}</td>
+		<td>{{task.ActualEndDate}}</td>
+		<td>{{task.EstimatedEffort}}</td>
+		<td>{{task.ActualEffort}}</td>
+	</tr>
+</table> -->
+<br>
+<br>
+		
+<div ui-grid="gridOptions" 
+		ui-grid-selection
+		ui-grid-exporter 
+		ui-grid-move-columns 
+		ui-grid-edit ui-grid-row-edit ui-grid-cellNav
+		class="grid">
+
+</div>

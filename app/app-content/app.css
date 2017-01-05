@@ -1,0 +1,91 @@
+body {
+    padding: 20px 0;
+    background-repeat: no-repeat;
+    background-size: 3000px;
+}
+
+.grid {
+    height : 800px;
+}
+
+.flash-message {
+    margin-top: 20px;
+}
+
+#menu1 {
+    width: auto;
+    height: 35px;
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    background-color: #8AD9FF;
+    border-radius: 8px;
+
+}
+
+#menu1 ul {
+    height: auto;
+    padding: 8px 0px;
+    margin: 0px;
+}
+
+#menu1 li { 
+display: inline; 
+padding: 20px; 
+}
+
+#menu1 a {
+    text-decoration: none;
+    color: #00F;
+    padding: 8px 8px 8px 8px;
+}
+#menu1 a:hover {
+    color: #F90;
+    background-color: #FFF;
+}
+
+#menu1.logout {
+	text-align: right;
+}
+
+#input {
+	display: inline;
+	margin: 2px;
+}
+
+#task-form {
+	width:1000;
+	padding:20;
+}
+
+.taskinput {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+input {
+	max-width: 500px;
+}
+
+fieldset {
+	display: block;
+	margin: 20px;
+	padding: 20px;
+}
+
+#navHome {
+	font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+
+.taskTable {
+    border-collapse: collapse;
+    border: 1px solid white;
+}
+
+.ui-grid-menu .ui-grid-menu-inner ul li button {
+    display: list-item;
+}

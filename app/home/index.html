@@ -1,0 +1,56 @@
+﻿<h1>Hi {{vm.user.firstName}}!!</h1>
+
+<!-- <div style="padding-left: 30px;">
+			<button type="button" id="addRow" class="btn btn-success" ng-click="vm.addRow()">Add Row</button>
+</div> -->
+<!-- List of Tasks For Team: &nbsp;
+
+<select ng-model="vm.task.projectName" ng-options="i.ProjectName for i in vm.projects">
+  <option value="">Select</option>              
+</select>
+
+<button class="btn btn-primary" ng-click="vm.getSelTasks()">OK</button>
+
+
+<table id="taskTable" class="table table-striped" style="">
+	<tr>
+		<td>Project</td>
+		<td>Resource</td>
+		<td>TaskName</td>
+		<td>TaskStatus</td>
+		<td>Estimated Start Date</td>
+		<td>Estimated End Date</td>
+		<td>Actual Start Date</td>
+		<td>Actual End Date</td>
+		<td>Estimated Effort</td>
+		<td>Actual Effort</td>
+	</tr>
+	<tr ng-repeat = "task in tasks">
+		<td>{{task.projectName}}</td>
+		<td>{{task.username}}</td>
+		<td>{{task.taskName}}</td>
+		<td>{{task.status}}</td>
+		<td>{{task.estimatedStartDate}}</td>
+		<td>{{task.estimatedEndDate}}</td>
+		<td>{{task.actualStartDate}}</td>
+		<td>{{task.actualEndDate}}</td>
+		<td>{{task.estimatedEffort}}</td>
+		<td>{{task.actualEffort}}</td>
+	</tr>
+</table> -->
+Select rows to delete:
+<button type="button" class="btn btn-success" ng-click="deleteSelected()">Delete Selected</button>
+
+<div ui-grid="taskGrid" 
+		ui-grid-selection 
+		ui-grid-move-columns 
+		ui-grid-resize-columns 
+		ui-grid-pinning 
+		ui-grid-auto-resize
+		ui-grid-exporter 
+		ui-grid-edit
+		ui-grid-row-edit 
+		ui-grid-cellNav class="grid">
+</div>
+
+

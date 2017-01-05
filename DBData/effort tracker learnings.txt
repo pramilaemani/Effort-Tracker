@@ -1,0 +1,22 @@
+command to import JSON array into MongoDB
+
+
+C:\mongodb\bin>mongoimport --host localhost:27017 --db trackerAppDB --collection tasks --jsonArray C:\ProjectTracker-master\ProjectTracker-master\test.json
+
+
+
+mongoimport --host localhost:27017 --db trackerAppDB --collection projects --jsonArray E:\NewEffortTracker-master\NewEffortTracker-master\DBData\projects.json
+
+mongoimport --host localhost:27017 --db trackerAppDB --collection users --jsonArray E:\NewEffortTracker-master\NewEffortTracker-master\DBData\users.json
+
+mongoimport --host localhost:27017 --db trackerAppDB --collection tasks --jsonArray C:\NewEffortTracker\DBData\tasks.json
+
+C:\NewEffortTracker-master\DBData\taskDB.xlsx
+
+mongoimport --host localhost:27017 --db trackerAppDB --collection taskStatuses --jsonArray E:\NewEffortTracker-master\NewEffortTracker-master\DBData\status.json
+
+To replace the String format date to ISO date format
+db.tasks.find().forEach(function(doc) { 
+    doc.EstimatedStartDate=new Date(doc.EstimatedStartDate);
+    db.tasks.save(doc); 
+    })

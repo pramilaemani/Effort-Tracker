@@ -1,0 +1,50 @@
+﻿    <h1>Hi {{vm.user.firstName}}!!</h1>
+<div class="form-container">
+    <form method="post">
+    <fieldset>
+    <table>
+    <tr>
+        <td>
+         <label style="margin: 20px" for="firstName">First name</label>
+         <input type="text" id="firstName" class="form-control" ng-model="vm.user.firstName" required /><br><br>
+    </td>
+    </tr>
+    <tr>
+    <td>
+         <label style="margin: 20px" for="lastName">Last name</label>
+            <input type="text" id="lastName" class="form-control" ng-model="vm.user.lastName" required /><br><br>
+    </td>        
+    </tr>
+    <tr>
+    <td>
+         <label style="margin-left: 20px; margin-right:52px;" for="email">E-Mail</label>
+            <input type="text" id="email" class="form-control" ng-model="vm.user.email" required /><br><br>
+    </td>
+    </tr>        
+    <tr>
+    <td>
+         <label style="margin-left: 20px; margin-right:46px;" for="project">Project</label>
+            <!-- <input type="text" id="project" class="form-control" ng-model="vm.user.project" required /> -->
+        <select ng-model="vm.task.projectName" ng-options="i.ProjectName for i in vm.projects">
+          <option value="">--Select--</option>              
+        </select><br><br>
+    </td>            
+    </tr>        
+    <tr>
+    <td>
+        <label style="margin-left: 20px; margin-right:23px;" for="username">Username</label>
+            <input type="text" id="username" class="form-control" ng-model="vm.user.username" required /><br><br>
+    </td>
+    </tr>        
+    <tr>
+    <td>
+         <label style="margin-left: 20px; margin-right:23px;" for="password">Password</label>
+            <input type="password" id="password" class="form-control" ng-model="vm.user.password" /><br><br>
+</td>            
+    </tr>       
+        
+     </table>
+     <button class="btn btn-primary" ng-click="vm.saveUser()">Save</button>
+            <button class="btn btn-danger" ng-click="vm.deleteUser()">Delete</button>       
+    </fieldset>    
+</div>
